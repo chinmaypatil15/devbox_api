@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Usage</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>API Usage Logs</h2>
+        <ul>
+            {% for item in usage %}
+                <li>{{ item.timestamp }} - {{ item.method }} {{ item.endpoint }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
