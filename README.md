@@ -29,12 +29,12 @@ This project implements a simple backend RESTful API service using **Django + Dj
     cd devbox-api
 ```
 
-2. **Create virtual environment**
+### 2. **Create virtual environment**
 ```bash
-python -m venv venv
+python -m venv env
 ```
 
-3. **Activate virtual environment**
+### 3. **Activate virtual environment**
 - Windows:
 ```cmd
 .\venv\Scripts\activate
@@ -44,19 +44,26 @@ python -m venv venv
 source venv/bin/activate
 ```
 
-4. **Install dependencies**
+### 4. **Install dependencies**
 ```bash
 pip install -r requirements.txt
 ```
+### 5. Apply Migrations ---- (if needed)
 
-5. **Initialize database**
 ```bash
-python init_db.py
+python manage.py migrate
 ```
 
-6. **Run the application**
+### 6. Create Superuser (for Admin Access) ---- (if needed)
+
 ```bash
-python app.py
+python manage.py createsuperuser
+```
+
+### 7. Run the Development Server ---- (if only run than just skip 5th and 6th and run this )
+
+```bash
+python manage.py runserver
 ```
 
 ## Access the Application
@@ -74,6 +81,8 @@ devbox_api/
 │   ├── __init__.py
 │   ├── __pycache__
 │   ├── migrations
+│   ├── static
+│   ├── templates
 │   ├── admin.py
 │   ├── apps.py
 │   ├── mock_data.py
